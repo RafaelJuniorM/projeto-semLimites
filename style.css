@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --main-text-color: #312d64;
+  --title-text-color: #b52184;
+  --bg-gradient-color: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+
+  --main-text-font: "Mulish", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-family: var(--main-text-font);
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  color: var(--title-text-color);
+}
+
+header p {
+  font-family: var(--main-text-font);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--main-text-color);
+}
+
+.arrow {
+  border: 4px solid var(--title-text-color);
+  border-radius: 999px;
+  padding: 3rem 0.4rem;
+
+  margin: 3.5rem 0 9rem;
+}
+
+.arrow img {
+  margin-bottom: 0;
+}
+
+/* Main */
+
+main {
+  background: var(--bg-gradient-color);
+}
+
+main .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.card .cards {
+  width: 350px;
+
+  background-color: #fff;
+  border-radius: 1.9rem;
+  padding: 2.6rem;
+}
+
+.cards .title-cards {
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: normal;
+  font-family: var(--main-text-font);
+  line-height: 3.7rem;
+  color: var(--title-text-color);
+
+  padding: 3rem 0 2rem;
+}
+
+.cards .paragraph-cards {
+  font-family: var(--main-text-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--main-text-color);
+}
+
+.cards:first-child {
+  margin-top: 5rem;
+}
+.cards:last-child {
+  margin-bottom: 5rem;
+}
+
+/* FOMULARIO*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  border: none;
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+form h2 {
+  font-family: var(--main-text-font);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 4rem;
+
+  color: var(--title-text-color);
+
+  margin-left: -72px;
+}
+
+form input,
+textarea {
+  width: 34.8rem;
+
+  padding: 1.2rem 1.4rem;
+  border: 2px solid #312d64;
+  border-radius: 16px;
+}
+
+form input:nth-child(2) {
+  background-image: url(./assets/person.png);
+  background-repeat: no-repeat;
+  background-position: 5% 45%;
+}
+
+form input:nth-child(3) {
+    background-image: url(./assets/icon-email.png);
+    background-repeat: no-repeat;
+    background-position: 5% 45%;
+}
+
+form input::placeholder {
+  padding-left: 4rem;
+  color: var(--main-text-color);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: var(--main-text-font);
+}
+
+.input-submit{
+    width: 150px;
+    background: var(--bg-gradient-color);
+    
+    color: #fff;
+    font-family: var(--main-text-font);
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    margin-left: -192px;
+    margin-bottom: ;
+}
+
+/* footer*/
+
+footer {
+    background: var(--bg-gradient-color);
+    padding: 1.6rem;
+
+    text-align: center;
+    color:#fff;
+    font-family: var(--main-text-font);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
