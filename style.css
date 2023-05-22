@@ -14,13 +14,14 @@
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  width: 100%;
+  text-align: center;
 }
 
-header img {
+header .astronaut {
   margin-bottom: 3rem;
+  overflow:initial;
 }
 
 header h1 {
@@ -28,7 +29,7 @@ header h1 {
   font-weight: 900;
   font-size: 3.2rem;
   line-height: 4rem;
-
+  
   color: var(--title-text-color);
 }
 
@@ -46,7 +47,15 @@ header p {
   border-radius: 999px;
   padding: 3rem 0.4rem;
 
-  margin: 3.5rem 0 9rem;
+  margin: 3.5rem auto 0;
+  width: fit-content;
+
+  cursor: pointer;
+  transition: filter 300ms;
+}
+
+.arrow:hover {
+filter: brightness(0.7);
 }
 
 .arrow img {
@@ -104,6 +113,7 @@ main .card {
 /* FOMULARIO*/
 
 form {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,7 +156,9 @@ form input:nth-child(3) {
     background-position: 5% 45%;
 }
 
-form input::placeholder {
+form input::placeholder,
+form textarea::placeholder
+ {
   padding-left: 4rem;
   color: var(--main-text-color);
 
@@ -155,17 +167,31 @@ form input::placeholder {
   font-family: var(--main-text-font);
 }
 
-.input-submit{
-    width: 150px;
-    background: var(--bg-gradient-color);
+form textarea::placeholder{
+  padding-left: 2.8rem;
+}
+
+.contato form .input-submit{
+  width: fit-content;
+  background: var(--bg-gradient-color);
     
-    color: #fff;
-    font-family: var(--main-text-font);
-    font-weight: 700;
-    font-size: 1.4rem;
+  color: #fff;
+  font-family: var(--main-text-font);
+  font-weight: 700;
+  font-size: 1.4rem;
+  
+  border: none;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+ 
+  cursor:pointer;
+  transition: filter 200ms;
 
-    margin-left: -192px;
+ 
+}
 
+.contato form .input-submit:hover{
+  filter: brightness(0.9);
 }
 
 /* footer*/
@@ -179,4 +205,101 @@ footer {
     font-family: var(--main-text-font);
     font-size: 1.4rem;
     font-weight: 600;
+    
+}
+
+
+/* VERSION OF DESKTOP */
+
+@media (min-width: 1440px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    max-height: 83.6rem;
+
+    padding: 0 2.9rem 10.3rem 10.9rem;
+
+    background-image: url(./assets/img-header.png) ;
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: top right ;
+  }
+
+  .header-text{
+    order: 1;
+    margin-top: 31.2rem;
+  }
+
+  .header-text h1 {
+    font-size: 4.8rem;
+    line-height: 7rem;
+  }
+  .header-text .sub-title{
+    font-size: 2.4rem;
+    margin-bottom: 17.9rem;
+  }
+  .header-text .arrow {
+   margin: 0;
+   justify-self: flex-end;
+  }
+
+  header .astronaut {
+   display: none; 
+  }
+  
+
+  /*cards */
+
+  main .card {
+    height: 57.6rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .card .cards {
+    height: 40rem;
+    margin: 0;
+    padding: 3rem;
+  }
+
+  .card .cards img {
+    width: 9.7rem;
+  }
+
+
+  /* section contact */
+
+  form {
+    align-items: flex-start;
+  }
+
+  .contato {
+ 
+    display: flex;
+    align-items: center;
+    gap: 9.2rem;
+    padding: 0;
+    height: 62.2rem;
+    margin: 0 auto;
+
+    background-image: url(./assets/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .contato h2 {
+    align-self: flex-start;
+    margin-left: 5px;
+  }
+
+  .contato form {
+    margin-left: 10.9rem;
+  }
+
+  .contato form input,textarea {
+    width:59rem ;
+  }
+  
 }
